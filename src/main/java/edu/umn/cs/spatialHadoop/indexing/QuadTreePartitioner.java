@@ -13,6 +13,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Queue;
 import java.util.Vector;
 
@@ -284,4 +285,5 @@ public class QuadTreePartitioner extends Partitioner {
       System.out.println(qtp.getPartitionAt(i).toWKT());
     }
   }
+
 }

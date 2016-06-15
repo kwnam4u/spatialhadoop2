@@ -12,6 +12,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 import java.lang.IllegalArgumentException;
+import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -174,6 +175,6 @@ public class GridPartitioner extends Partitioner {
 
   @Override
   public CellInfo getPartitionAt(int index) {
-    return getPartition(index);
-  }
+    return getPartition(index);  }
+  
 }

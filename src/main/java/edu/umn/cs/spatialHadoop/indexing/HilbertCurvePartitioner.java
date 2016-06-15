@@ -13,6 +13,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Vector;
 
 import org.apache.hadoop.fs.Path;
@@ -185,4 +186,5 @@ public class HilbertCurvePartitioner extends Partitioner {
       System.out.println(p.x+","+p.y+","+partition);
     }
   }
+
 }

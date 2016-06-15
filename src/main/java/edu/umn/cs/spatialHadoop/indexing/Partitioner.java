@@ -10,6 +10,7 @@ package edu.umn.cs.spatialHadoop.indexing;
 
 import java.io.IOException;
 import java.lang.IllegalArgumentException;
+import java.util.List;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.filecache.DistributedCache;
@@ -144,4 +145,5 @@ public abstract class Partitioner implements Writable {
       return null;
     }
   }
+  
 }

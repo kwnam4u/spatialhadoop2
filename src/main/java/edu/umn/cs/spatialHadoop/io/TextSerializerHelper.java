@@ -187,6 +187,31 @@ public final class TextSerializerHelper {
     return d;
   }
   
+  /*
+   * Deserializes and consumes a String from the given text.
+   * 
+   */
+  public static String consumeString(Text text, char separator)
+  {
+    int i = 0;
+    byte[] bytes = text.getBytes();
+    String resultString = null;
+    // Skip until the separator or end of text
+    
+    while (i < text.getLength() &&  bytes[i] != separator )
+      i++;
+    
+    resultString = new String(bytes, 0, i-1);
+    
+    if (i < text.getLength() && bytes[i] == separator)
+      i++;
+    
+    System.arraycopy(bytes, i, bytes, 0, text.getLength() - i);
+    text.set(bytes, 0, text.getLength() - i);
+    
+    return resultString;
+  }
+  
   /**
    * Appends hex representation of the given number to the given string.
    * If append is set to true, a comma is also appended to the text.

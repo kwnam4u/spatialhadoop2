@@ -6,7 +6,7 @@
  http://www.opensource.org/licenses/apache2.0.php.
 -->
 
-<project name="SpatialHadoop" default="compile1" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="SpatialHadoop" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
   <description>Compiles SpatialHadoop and builds packages to be installed on an existing Hadoop cluster</description>
   <!-- set global properties for this build -->
   <property name="src" location="src/main/java"/>
